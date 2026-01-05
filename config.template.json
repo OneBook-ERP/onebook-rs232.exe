@@ -1,0 +1,55 @@
+{
+    "_comment": "Waybridge Agent Configuration Template",
+    "_instructions": "Copy this file to config.json and update with your settings",
+    "serial": {
+        "_comment": "Serial port configuration for weighbridge connection",
+        "port": "COM3",
+        "baudrate": 9600,
+        "timeout": 1,
+        "bytesize": 8,
+        "parity": "N",
+        "stopbits": 1
+    },
+    "erp": {
+        "_comment": "ERP system connection settings",
+        "url": "http://127.0.0.1:8013/api/method/mine.api.waybridge.waybridge",
+        "token": "",
+        "_token_format": "api_key:api_secret",
+        "timeout": 10,
+        "retry_attempts": 3,
+        "retry_delay": 2
+    },
+    "weighbridge": {
+        "_comment": "Weighbridge identification and measurement settings",
+        "id": "WB-01",
+        "unit": "kg",
+        "_unit_options": [
+            "kg",
+            "lb",
+            "ton",
+            "g"
+        ],
+        "precision": 2
+    },
+    "logging": {
+        "_comment": "Logging configuration",
+        "level": "INFO",
+        "_level_options": [
+            "DEBUG",
+            "INFO",
+            "WARNING",
+            "ERROR",
+            "CRITICAL"
+        ],
+        "file": "waybridge_agent.log",
+        "max_size_mb": 10,
+        "backup_count": 5
+    },
+    "app": {
+        "_comment": "Application settings",
+        "version": "1.0.0",
+        "auto_start": false,
+        "minimize_to_tray": false,
+        "test_connection_on_start": false
+    }
+}

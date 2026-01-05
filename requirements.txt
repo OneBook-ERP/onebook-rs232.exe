@@ -1,0 +1,11 @@
+# Waybridge Agent Requirements
+# Production dependencies
+
+# HTTP client for ERP communication
+requests>=2.31.0
+
+# Serial port communication
+pyserial>=3.5
+
+# Configuration validation
+jsonschema>=4.20.0
